@@ -6,8 +6,10 @@
       function setWorkbrightSource() {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-
-        document.getElementById("wb-demo-iframe").src = "https://" + urlParams.get('subdomain') + "workbright.com"
+        
+        if (urlParams.length) {
+          document.getElementById("wb-demo-iframe").src = "https://" + urlParams.get('subdomain') + "." + "workbright.com"
+        }
       }
     </script>
   </head>
