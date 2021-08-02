@@ -1,28 +1,15 @@
 <!DOCTYPE html>
   <head>
-    <title>WorkBright Embedded Web Demo</title>
-
-    <script>
-      function setWorkbrightSource() {
-        const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        
-        if (urlParams.length) {
-          document.getElementById("wb-demo-iframe").src = "https://" + urlParams.get('subdomain') + "." + "workbright.com"
-        }
-      }
-    </script>
+    <title>WorkBright Embedded Web iFrame Demo</title>
   </head>
   <body>
     <p>main site header</p>
-
     <iframe
       id="wb-demo-iframe"
-      src="https://boh-test.workbright.com"
+      src="https://embedded.wb.test/sign_in_with_token?token=5a3ae5c59f9b89a83e6982827fbedf98"
       title="WorkBright in an iFrame"
       width="500"
       height="700"
-      onLoad="setWorkbrightSource()"
     ></iframe>
     <p>main site footer</p>
   </body>
