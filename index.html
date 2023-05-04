@@ -1,16 +1,19 @@
 <!DOCTYPE html>
   <head>
+    <link rel="stylesheet" href="main.css">
     <title>WorkBright Embedded Web iFrame Demo</title>
   </head>
   <body>
-    <p>main site header</p>
-    <iframe
-      id="wb-demo-iframe"
-      src="https://embedded.wb.test/sign_in_with_token?token=5a3ae5c59f9b89a83e6982827fbedf98"
-      title="WorkBright in an iFrame"
-      width="500"
-      height="700"
-    ></iframe>
-    <p>main site footer</p>
+    <div class="header">
+      <p class="logo-headline">Your website header</p>
+    </div>
+    
+    <iframe name="testEmbed" width="900" height="1200" frameBorder="0" src="https://patrick.wb.test/sign_in_with_token?token="></iframe>
+
+    <div class="footer">
+      <p class="footer-content">Your footer content</p>
+    </div>
   </body>
 </html>
+
+
