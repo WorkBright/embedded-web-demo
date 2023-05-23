@@ -5,9 +5,9 @@ body {
 
 .header {
   background: #c8d7dc; /* Old browsers */
-background: -moz-linear-gradient(left, #c8d7dc 0%, #c8d7dc 47%, #e3eaed 85%, #f2f5f6 99%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: -moz-linear-gradient(left, #c8d7dc 0%, #c8d7dc 47%, #e3eaed 85%, #f2f5f6 99%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   height: 75px;
   position: fixed;
   width: 100%;
