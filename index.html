@@ -7,8 +7,54 @@
     <div class="header">
       <p class="logo-headline">Your website header</p>
     </div>
-    
-    <iframe name="testEmbed" width="900" height="1200" frameBorder="0" src="https://patrick.wb.test/sign_in_with_token?token="></iframe>
+
+      <!--
+        ////////////////////////////////
+        EMPLOYEE EMBEDDED 
+        ////////////////////////////////
+      -->
+
+      <!--
+          INITIAL EMPLOYEE SIGN-IN
+          1) request token for individual employee https://developers.workbright.com/reference/request-one-time-access-token
+          2) load the page with the sign in url and token below
+      -->
+
+      <iframe width="900" height="1200" frameBorder="0" src="https://patrick.wb.test/sign_in_with_token?token=insert_token"></iframe>
+
+      <!-- Staff dashboard after sign in (no token needed) -->
+      <!-- <iframe width="900" height="1200" frameBorder="0" src="https://patrick.wb.test/"></iframe> -->
+
+      <!-- I-9 only -->
+      <!-- <iframe name="testEmbed" width="900" height="1200" frameBorder="0" src="https://patrick.wb.test/forms/i9/submission/new"></iframe> -->
+
+      <!-- W-4 only -->
+      <!-- <iframe name="testEmbed" width="900" height="1200" frameBorder="0" src="https://patrick.wb.test/forms/w4/submission/new"></iframe> -->
+      
+      
+      <!--
+        /////////////////////////////////////
+        ADMIN WITH EMPLOYEE RECORD EMBEDDED
+        /////////////////////////////////////
+      -->
+
+      <!--
+          INITIAL ADMIN SIGN-IN
+          1) Create admin with employee record
+          2) request token for individual employee https://developers.workbright.com/reference/request-one-time-access-token
+          3) load the page with the sign in url and token below
+      -->
+      <!-- <iframe width="900" height="1200" frameBorder="0" src="https://patrick.wb.test/sign_in_with_token?token=insert_token"></iframe> -->
+
+      <!-- SIGN ONE PENDING REVIEW I-9 -->
+      <!-- <iframe name="testEmbed" width="1200" height="2000" frameBorder="0" src="https://patrick.wb.test/onboarding/i9/review?ids[]=6"></iframe> -->
+
+      <!-- EDIT MULTIPLE -->
+      <!-- <iframe name="testEmbed" width="1200" height="2000" frameBorder="0" src="https://patrick.wb.test/onboarding/i9/review?ids[]=6&ids[]=2"></iframe> -->
+
+      <!-- EDIT NON COUNTERSIGNED -->
+      <!-- <iframe name="testEmbed" width="1200" height="2000" frameBorder="0" src="https://patrick.wb.test/onboarding/i9/review?ids[]=6&edit=true"></iframe> -->
+      
 
     <div class="footer">
       <p class="footer-content">Your footer content</p>
