@@ -1,25 +1,40 @@
-<!DOCTYPE html>
-  <head>
-    <link rel="stylesheet" href="main.css">
-    <title>WorkBright Embedded Web iFrame Demo</title>
-  </head>
-  <body>
-    <div class="header">
-      <p class="logo-headline">Your website header</p>
-    </div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<link rel="stylesheet" href="main.css">
 
-      <!--
-        ////////////////////////////////
-        EMPLOYEE EMBEDDED 
-        ////////////////////////////////
-      -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-      <!--
-          INITIAL EMPLOYEE SIGN-IN
-          1) request token for individual employee https://developers.workbright.com/reference/request-one-time-access-token
-          2) load the page with the sign in url and token below
-      -->
+<div id="app">
+  <div class="header">
+    <p class="logo-headline">Your website header</p>
+  </div>
+  <div style="margin: 20px 0 0 20px;">
+    <h3>Embedded Sign-In Link</h2>
+    <input v-model="placeholder" style="width: 500px" placeholder="https://embedded.workbright.com/sign_in_with_token?token="></input>
+  </div>
+  <!-- <button type="submit">Submit</button> -->
 
+  <iframe width="900" height="1200" frameBorder="0" allow="camera" :src="placeholder"></iframe>
+  <div class="footer">
+    <p class="footer-content">Your footer content</p>
+  </div>
+</div>
+
+
+<script>
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        placeholder: '',
+      }
+    }
+  }).mount('#app')
+</script>
+
+
+
+<<<<<<< Updated upstream
       <iframe width="900" height="1200" frameBorder="0" allow="camera" src="https://embedded.workbright.com/sign_in_with_token?token=e261d246598a57c575092afe6e1711be"></iframe>
 
       <!-- Staff dashboard after sign in (no token needed) -->
@@ -61,5 +76,7 @@
     </div>
   </body>
 </html>
+=======
+>>>>>>> Stashed changes
 
 
