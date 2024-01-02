@@ -1,6 +1,41 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <link rel="stylesheet" href="main.css">
 
+<style>
+  body {
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .header {
+    background: #c8d7dc; /* Old browsers */
+    background: -moz-linear-gradient(left, #c8d7dc 0%, #c8d7dc 47%, #e3eaed 85%, #f2f5f6 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    height: 75px;
+    width: 100%;
+    padding: 10px; 
+  }
+
+  .logo-headline {
+    font-size: 22px;
+    padding-left: 10px;
+  }
+
+  iframe {
+    margin: 100px;
+  }
+
+  .footer {
+    border-top: 1px solid #ddd;
+
+  }
+
+  .footer-content {
+    padding-left: 10px;
+  }
+</style>
+
 <div id="app">
   <div class="header">
     <p class="logo-headline">Your website header</p>
