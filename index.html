@@ -1,56 +1,79 @@
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 
-<style>
-  body {
-    margin: 0;
-    font-family:Arial, Helvetica, sans-serif;
-  }
+<html lang="en">
+  <body>
+    <div class="container-fluid">
+      <nav>
+        <ul>
+          <li><strong>Your Brand</strong></li>
+        </ul>
+        <ul>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#" role="button">Sign In</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main class="container-fluid" id="app">
+      <div class="grid">
+          <div>
+            <article>
+              <h4>This is a demo of WorkBright's embedded feature within an iframe.</h4>
 
-  .header {
-    background: #c8d7dc; /* Old browsers */
-    background: -moz-linear-gradient(left, #c8d7dc 0%, #c8d7dc 47%, #e3eaed 85%, #f2f5f6 99%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #c8d7dc 0%,#c8d7dc 47%,#e3eaed 85%,#f2f5f6 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    height: 75px;
-    width: 100%;
-    padding: 10px; 
-  }
+            <p>
+              <small>
+                <ol>
+                  <li>Request a token for an <a target="_blank" href="https://developers.workbright.com/reference/request-one-time-access-token">employee</a> or <a href="https://developers.workbright.com/reference/request-one-time-user-access-token">admin</a></li>
+                  <li>Copy and paste the <a target="_blank" href="https://developers.workbright.com/reference/signing-in-with-token">login URL</a> below</li>
+                </ol>
+              </small>
+            </p>
+            <div>
+              <label for="embeddedLink">Embedded Sign-In Link:</label>
+            </div>
+            <input v-model="placeholder" name="embeddedLink" id="embeddedLink" placeholder="https://embedded.workbright.com/sign_in_with_token?token="></input>
 
-  .logo-headline {
-    font-size: 22px;
-    padding-left: 10px;
-  }
+            <p>
+              <details>
+                <summary>Sample Paths for Staff/Employees:</summary>
+                <ul> 
+                  <li>View I-9 </li>
+                  <ul><li><em>/forms/i9/submission/new</em></li></ul>
+                  <li>View W-4 </li>
+                  <ul><li><em>/forms/w4/submission/new</em></li></ul>
+                  <li>View Custom Form</li>
+                  <ul><li><em>/forms/DOCUMENTID/submission/new</em></li></ul>
+                </ul>
+              </details>
+              
+              <details >
+                <summary>Sample Paths for Admins</summary>
+                <ul> 
+                  <li>View all Section 2 Inbox</li>
+                  <ul><li><em>/onboarding/i9/review</em></li></ul>
+                  <li>View Single Section 2 </li>
+                  <ul><li><em>/onboarding/i9/review?ids[]=SUBMISSIONID</em></li></ul>
+                </ul>
+              </details>
 
-  iframe {
-    margin: 100px;
-  }
 
-  .footer {
-    border-top: 1px solid #ddd;
-
-  }
-
-  .footer-content {
-    padding-left: 10px;
-  }
-</style>
-
-<div id="app">
-  <div class="header">
-    <p class="logo-headline">Your website header</p>
-  </div>
-  <div style="margin: 20px 0 0 20px;">
-    <h3>Embedded Sign-In Link</h2>
-    <input v-model="placeholder" style="width: 500px" placeholder="https://embedded.workbright.com/sign_in_with_token?token="></input>
-  </div>
-  <!-- <button type="submit">Submit</button> -->
-
-  <iframe width="900" height="1200" frameBorder="0" allow="camera" :src="placeholder"></iframe>
-  <div class="footer">
-    <p class="footer-content">Your footer content</p>
-  </div>
-</div>
-
+            </p>
+          </article>
+          </div>
+          <article v-if="placeholder.length">
+           <iframe class="embedded-iframe" width="100%" height="1200" frameBorder="0" allow="camera"  :src="placeholder" title="embedded-demo"></iframe>
+          </article>
+          <article v-else>
+            (Please add a URL, your iframe will appear below)
+          </article>
+      </div>
+    </main>
+    <footer class="container-fluid">
+      <small>Your footer content</small>
+    </footer>
+  </body>
+</html>
 
 <script>
   const { createApp } = Vue
@@ -63,5 +86,3 @@
     }
   }).mount('#app')
 </script>
-
-
